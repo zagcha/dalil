@@ -1,0 +1,38 @@
+RewriteEngine on
+
+RewriteRule index\.html$ index.php
+RewriteRule site-(.*)\.html$ site.php?id=$1
+RewriteRule catgory\.html$ catgory.php
+RewriteRule section-(.*)\.html$ section.php?id=$1
+RewriteRule ads-(.*)\.html$ go.php?id=$1
+RewriteRule add-site\.html$ add.php
+RewriteRule insert-site\.html$ add.php?action=insert
+RewriteRule insert-comment\.html$ add.php?action=addcomments
+
+RewriteRule orderbyvisitor-(.*)\.html$ section.php?id=$1&order=1
+RewriteRule orderbyrate-(.*)\.html$ section.php?id=$1&order=2
+RewriteRule orderbyold-(.*)\.html$ section.php?id=$1&order=3
+RewriteRule orderbylast-(.*)\.html$ section.php?id=$1&order=4
+
+RewriteRule show-site\.html$ index.php?X=1
+RewriteRule show-section\.html$ index.php?X=2
+
+RewriteRule pages-(.*)-(.*)\.html$ section.php?id=$1&page=$2
+
+RewriteRule contact\.html$ contact.php
+RewriteRule contact-send\.html$ contact.php?action=send
+
+RewriteRule article\.html$ article.php
+RewriteRule article-(.*)\.html$ article.php?id=$1
+RewriteRule rate-(.*)-(.*)\.html$ ratecode.php?rate=1&siteid=$1&sitename=$2
+RewriteRule archive\.html$ archive.php
+
+RewriteRule rss\.html$ rss.php
+
+RewriteRule vote\.html$ poll.php?x=vote
+RewriteRule poll-(.*)\.html$ poll.php?x=show&id=$1
+
+RewriteRule terms-adding\.html$ terms-adding.php
+RewriteRule country-(.*)\.html$ country.php?id=$1
+RewriteRule language-(.*)\.html$ lang.php?id=$1
+
